@@ -1,12 +1,16 @@
 services:
   db:
     image: postgres:14
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: posyoshi
+      POSTGRES_DB: mydb
   web:
     build: .
     command: python3 manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
     ports:
-      - "80:8080"
+      - "8000:8000"
     depends_on:
       - db
