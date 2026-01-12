@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
 def index(request):
-    return render(request, 'webgame/index.html')
+    return render(request, 'web_segmenttree/index.html')

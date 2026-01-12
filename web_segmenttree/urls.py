@@ -1,13 +1,10 @@
-from django.urls import path, include
+from django.urls import path
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('game/', include('game.urls')),
-    path('tic-tac-toe/', include('game.urls')),
-    path('segmenttree/', include('web_segmenttree.urls')),
+    path('', views.index, name='index'),
 ]
 
 if settings.DEBUG:
