@@ -12,8 +12,6 @@ let turn = 'X';
 // 0 1 2
 // 3 4 5
 // 6 7 8
-
-// const weights = [2,1,2,1,3,1,2,1,2];
 const weights = Array(9);
 for(let i=0;i<9;i++){
   weights[i] = Math.floor( (Math.random()-0.5) * 100 );
